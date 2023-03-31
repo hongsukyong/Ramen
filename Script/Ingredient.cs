@@ -23,4 +23,13 @@ public class Ingredient : ScriptableObject
         vegetable,
         LiveThings
     }
+    public enum ItemGrade
+    {
+        Comon,
+        Nomal,
+        Rare,
+        Epic,
+        Legend,
+        Hidden
+    }
 }
