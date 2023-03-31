@@ -67,13 +67,13 @@ public class DragManager : MonoBehaviour
 
         if(!draging)
         {
-            Debug.Log("StartDrag");
             if(clickObj != null)
-            ObjEvent();
+            {
+                ObjEvent();
+            }
         }
         else
         {
-            Debug.Log("enddrag");
             EndDrag();
         }
     }
