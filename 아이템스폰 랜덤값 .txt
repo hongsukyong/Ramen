@@ -1,0 +1,32 @@
+
+public void SpawnEvent()
+{
+	int i = ranom.range(0,9);
+	GameObject A;
+
+	for(int b= 0; b <i; b++);
+	{
+		ItemDraw();
+		inventoryManager.AddItem(A);
+	}
+}
+
+void ItemDraw()
+{
+	int x = Random.Range(0, itemDb.ingredientItem.Count);
+	GameObject A = itemDB.ingredientItem[x];
+	SpawnItem(A);
+	FreshnessDraw(A);
+}
+
+void SpawnItem(GameObject A)
+{
+	Instantiate(A, itemDb.transform, true);
+	A.transform.position = ItemDb.transform.position;	
+}
+
+void FreshnessDraw(GameObject x, Int y) //int y 는 상점의 등급 10등급까지 있을예정
+{
+	int k = Random.Range(10y + 1, 100);
+	x.foodinfo.freshness = k;
+}
