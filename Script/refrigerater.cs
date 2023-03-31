@@ -52,10 +52,14 @@ public class refrigerater : MonoBehaviour
         panelopen = panel.gameObject.activeSelf;
         gameManager.ConfirmDrag();
     }
-
+    
+    //! 3월 31일 이천추가내용 - //fresh = _obj.GetComponent<FoodInfo>().freshness;줄은 _obj가 가지고 있는 foodinfo 에서 추출하기 때문에 굳이  
+    //함수에 들어갈 필요는 없음 fresh가 쓰이는곳을 찾아서 적용할것 초기화나 선언할 필요가 acquireitem 에서는 없다고 느껴짐 
+    
+    
     public void AcquireItem(GameObject _obj, float fresh, int _count = 1)                           //? 슥듭합니다 아이템을 카운트만큼
     {
-        Ingredient _item =_obj.gameObject.GetComponent<Info>().item;
+        Ingredient _item =_obj.gameObject.GetComponent<Info>().item;            
         //fresh = _obj.GetComponent<FoodInfo>().freshness;
 
         if(_item.itemType != Ingredient.ItemType.LiveThings)                            //? (_item)의 타입이 생물재료가 아니라면 
